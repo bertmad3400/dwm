@@ -117,7 +117,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_u,	   spawn,	   SHCMD("setxkbmap dk")},
 	
 
-	{ MODKEY|ShiftMask,             XK_Tab,    zoom,           {0} },
+	{ MODKEY|,                      XK_space,    zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	
 	{ MODKEY,	                XK_q,      killclient,     {0} },
@@ -125,7 +125,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	/* { MODKEY,                       XK_space,  setlayout,      {0} }, */
 	
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	
