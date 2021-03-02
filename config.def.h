@@ -111,6 +111,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_z,	   incrgaps,	   {.i = +3 } },
 	{ MODKEY,			XK_x,	   incrgaps,	   {.i = -3 } },
 
+	{ MODKEY,			XK_u,	   spawn,	   SHCMD("setxkbmap us")},
+	{ MODKEY|ShiftMask,		XK_u,	   spawn,	   SHCMD("setxkbmap dk")},
 	
 	
 	{ MODKEY,                       XK_Return, zoom,           {0} },
