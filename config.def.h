@@ -117,7 +117,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_u,	   spawn,	   SHCMD("setxkbmap dk")},
 	
 
-	{ MODKEY|,                      XK_space,    zoom,           {0} },
+	{ MODKEY,             XK_space,  zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	
 	{ MODKEY,	                XK_q,      killclient,     {0} },
