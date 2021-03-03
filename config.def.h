@@ -134,10 +134,16 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Left,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Right, tagmon,         {.i = +1 } },
 
-        { MODKEY,                       XK_Page_Down,     cycle,          { .i = -1 } },
-        { MODKEY|ShiftMask,             XK_Page_Down,     tagcycle,       { .i = -1 } },
+        { MODKEY,                       XK_Page_Down, cycle,          { .i = -1 } },
+        { MODKEY|ShiftMask,             XK_Page_Down, tagcycle,       { .i = -1 } },
         { MODKEY,                       XK_Page_Up,   cycle,          { .i = +1 } },
         { MODKEY|ShiftMask,             XK_Page_Up,   tagcycle,       { .i = +1 } },
+
+	{ MODKEY,                       XK_Down, cycle,          { .i = -1 } },
+        { MODKEY|ShiftMask,             XK_Down, tagcycle,       { .i = -1 } },
+        { MODKEY,                       XK_Up,   cycle,          { .i = +1 } },
+        { MODKEY|ShiftMask,             XK_Up,   tagcycle,       { .i = +1 } },
+	
 
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
