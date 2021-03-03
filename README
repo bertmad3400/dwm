@@ -4,5 +4,5 @@ My custom build of DWM from suckless. The changes include (but is not limited to
 	Adding a scratchpad
 	Changing the border of the currently active window
 	Adding function for switching between tags using page up/down and move windows between tags using shiftmasks
-
+	Vagrant tags (hidding currently not active tags)	
  
