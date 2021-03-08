@@ -108,7 +108,8 @@ static Key keys[] = {
 	{ MODKEY|Mod4Mask,              XK_y,      incrohgaps,     {.i = +1 } },
 	{ MODKEY|Mod4Mask,              XK_o,      incrohgaps,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },*/
+	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
+	*/
 
 	/* Custom keybinds for vanitygaps */
 	{ MODKEY,                       XK_a,      togglegaps,     {0} },
@@ -163,7 +164,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_KP_Prior,	spawn,	   SHCMD("slock")},
 	{ MODKEY|ShiftMask,		XK_KP_Left,	spawn,	   SHCMD("sudo reboot")},
 	{ MODKEY|ShiftMask,		XK_KP_Begin,	spawn,	   SHCMD("sudo shutdown now")},
-	{ MODKEY,			XK_KP_End,	spawn,	   SHCMD("setxkbmap us")},
+	{ MODKEY|ShiftMask,		XK_KP_End,	spawn,	   SHCMD("setxkbmap us")},
 	{ MODKEY|ShiftMask,		XK_KP_Down,	spawn,	   SHCMD("setxkbmap dk")},
 
 	/*Other feature specific keybinds*/
