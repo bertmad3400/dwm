@@ -5,4 +5,9 @@ My custom build of DWM from suckless. The changes include (but is not limited to
 	Changing the border of the currently active window
 	Adding function for switching between tags using page up/down and move windows between tags using shiftmasks
 	Vagrant tags (hidding currently not active tags)	
- 
+	Adding custom keybinds for launching different commands and applications
+	Added quite a few new layouts including:
+		Centered master (and floating centered)
+		Gapless grids
+		Double deck
+		 
