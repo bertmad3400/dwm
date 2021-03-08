@@ -116,10 +116,6 @@ static Key keys[] = {
 	{ MODKEY,			XK_z,	   incrgaps,	   {.i = +3 } },
 	{ MODKEY,			XK_x,	   incrgaps,	   {.i = -3 } },
 
-	{ MODKEY,			XK_u,	   spawn,	   SHCMD("setxkbmap us")},
-	{ MODKEY|ShiftMask,		XK_u,	   spawn,	   SHCMD("setxkbmap dk")},
-
-
 	{ MODKEY,             		XK_space,  zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 
@@ -161,12 +157,16 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_t,        spawn,	   SHCMD("teams")},
 	{ MODKEY|ShiftMask,		XK_m,        spawn,	   SHCMD("minecraft-launcher")},
 
-	/* Feature specific keybinds*/
+	/* Feature specific keybinds using numberpad*/
 	{ MODKEY|ShiftMask,		XK_KP_Home,	spawn,	   SHCMD("scrot -e 'xclip -selection clipboard -t image/png -i $f'")},
 	{ MODKEY|ShiftMask,		XK_KP_Up,	spawn,	   SHCMD("scrot -e 'xclip -selection clipboard -t image/png -i $f' -s")},
 	{ MODKEY|ShiftMask,		XK_KP_Prior,	spawn,	   SHCMD("slock")},
 	{ MODKEY|ShiftMask,		XK_KP_Left,	spawn,	   SHCMD("sudo reboot")},
 	{ MODKEY|ShiftMask,		XK_KP_Begin,	spawn,	   SHCMD("sudo shutdown now")},
+	{ MODKEY,			XK_KP_End,	spawn,	   SHCMD("setxkbmap us")},
+	{ MODKEY|ShiftMask,		XK_KP_Down,	spawn,	   SHCMD("setxkbmap dk")},
+
+	/*Other feature specific keybinds*/
 	{ MODKEY,			XK_KP_Subtract,	spawn,	   SHCMD("pulsemixer --change-volume -7")},
 	{ MODKEY,			XK_KP_Add,	spawn,	   SHCMD("pulsemixer --change-volume +7")},
 	{ MODKEY,			XK_equal,	spawn,	   SHCMD("pulsemixer --toggle-mute")},
