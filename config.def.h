@@ -1,6 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 #include "gaplessgrid.c"
+#include "bstack.c"
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
@@ -56,6 +57,7 @@ static const Layout layouts[] = {
 	{ "|M|",      centeredmaster },
 	{ ">M>",      centeredfloatingmaster },
 	{ "###",      gaplessgrid },
+	{ "TTT",      bstack},
 };
 
 /* key definitions */
@@ -125,13 +127,15 @@ static Key keys[] = {
 
 	{ MODKEY,	                XK_q,      killclient,     {0} },
 
+	/* Custom keybinds for different layouts */
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[4]} },
-	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY|ShiftMask,             XK_f,      setlayout,      {.v = &layouts[5]} },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[6]} },
+	{ MODKEY|ShiftMask,		XK_t,	   setlayout,	   {.v = &layouts[7]} },
 	/* { MODKEY,                       XK_space,  setlayout,      {0} }, */
 	
 
@@ -160,7 +164,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_k,        spawn,	   SHCMD("keepassxc")},
 	{ MODKEY|ShiftMask,		XK_w,        spawn,	   SHCMD("firefox")},
 	{ MODKEY|ShiftMask,		XK_d,        spawn,	   SHCMD("discord")},
-	{ MODKEY|ShiftMask,		XK_t,        spawn,	   SHCMD("teams")},
+	{ MODKEY|ShiftMask,		XK_e,        spawn,	   SHCMD("teams")},
 	{ MODKEY|ShiftMask,		XK_m,        spawn,	   SHCMD("minecraft-launcher")},
 
 	/* Feature specific keybinds using numberpad*/
