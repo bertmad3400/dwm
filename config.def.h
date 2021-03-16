@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include "gaplessgrid.c"
+
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -53,6 +55,7 @@ static const Layout layouts[] = {
 	{ "DD",       doubledeck },
 	{ "|M|",      centeredmaster },
 	{ ">M>",      centeredfloatingmaster },
+	{ "###",      gaplessgrid },
 };
 
 /* key definitions */
@@ -128,7 +131,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_c,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[6]} },
 	/* { MODKEY,                       XK_space,  setlayout,      {0} }, */
+	
 
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	
