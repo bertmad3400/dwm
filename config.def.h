@@ -161,11 +161,14 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 
 	/* Program specific keybinds */
-	{ MODKEY|ShiftMask,		XK_k,        spawn,	   SHCMD("keepassxc")},
+	{ MODKEY|ShiftMask,		XK_k,        spawn,	   SHCMD("setxkbmap us; keepassxc")},
 	{ MODKEY|ShiftMask,		XK_w,        spawn,	   SHCMD("firefox")},
 	{ MODKEY|ShiftMask,		XK_d,        spawn,	   SHCMD("discord")},
 	{ MODKEY|ShiftMask,		XK_e,        spawn,	   SHCMD("teams")},
 	{ MODKEY|ShiftMask,		XK_m,        spawn,	   SHCMD("minecraft-launcher")},
+	{ MODKEY|ShiftMask,		XK_g,        spawn,	   SHCMD("geogebra")},
+	{ MODKEY|ShiftMask,		XK_v,        spawn,	   SHCMD("virtualbox")},
+	
 
 	/* Feature specific keybinds using numberpad*/
 	{ MODKEY|ShiftMask,		XK_KP_Home,	spawn,	   SHCMD("scrot -e 'xclip -selection clipboard -t image/png -i $f'")},
@@ -176,14 +179,14 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_KP_End,	spawn,	   SHCMD("setxkbmap us")},
 	{ MODKEY|ShiftMask,		XK_KP_Down,	spawn,	   SHCMD("setxkbmap dk")},
 
-	/*Other feature specific keybinds*/
+	/* Other feature specific keybinds */
 	{ MODKEY,			XK_KP_Subtract,	spawn,	   SHCMD("pulsemixer --change-volume -7")},
 	{ MODKEY,			XK_KP_Add,	spawn,	   SHCMD("pulsemixer --change-volume +7")},
 	{ MODKEY,			XK_equal,	spawn,	   SHCMD("pulsemixer --toggle-mute")},
 
-
-	{ MODKEY|ControlMask,		XK_KP_Home,  spawn,	   SHCMD("firefox music.youtube.com")},
-	{ MODKEY|ControlMask,		XK_KP_Up,    spawn,	   SHCMD("firefox finance.yahoo.com/quote/GME/")},
+	/* Keybinds specifically for launching specific urls using firefox */
+	{ MODKEY|ControlMask,		XK_KP_Home,  	spawn,	   SHCMD("firefox music.youtube.com")},
+	{ MODKEY|ControlMask,		XK_KP_Up,    	spawn,	   SHCMD("firefox finance.yahoo.com/quote/GME/")},
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
