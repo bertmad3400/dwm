@@ -8,6 +8,7 @@ static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
@@ -90,37 +91,8 @@ static Key keys[] = {
 
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-<<<<<<< HEAD
 
-	/* Stock keybinds for vanitygaps, not used
-	{ MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } },
-	{ MODKEY|Mod4Mask,              XK_l,      incrgaps,       {.i = -1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_h,      incrogaps,      {.i = +1 } },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_l,      incrogaps,      {.i = -1 } },
-	{ MODKEY|Mod4Mask|ControlMask,  XK_h,      incrigaps,      {.i = +1 } },
-	{ MODKEY|Mod4Mask|ControlMask,  XK_l,      incrigaps,      {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_0,      togglegaps,     {0} },
-	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
-	{ MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } },
-	{ MODKEY,                       XK_o,      incrihgaps,     {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } },
-	{ MODKEY|ControlMask,           XK_o,      incrivgaps,     {.i = -1 } },
-	{ MODKEY|Mod4Mask,              XK_y,      incrohgaps,     {.i = +1 } },
-	{ MODKEY|Mod4Mask,              XK_o,      incrohgaps,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
-	*/
-
-	/* Custom keybinds for vanitygaps */
-	{ MODKEY,                       XK_a,      togglegaps,     {0} },
-	{ MODKEY|ShiftMask,             XK_a,      defaultgaps,    {0} },
-	{ MODKEY,			XK_z,	   incrgaps,	   {.i = +3 } },
-	{ MODKEY,			XK_x,	   incrgaps,	   {.i = -3 } },
-
-	{ MODKEY,             		XK_space,  zoom,           {0} },
-=======
 	{ MODKEY,                       XK_Return, zoom,           {0} },
->>>>>>> parent of 9057e72 (Merge branch 'vanityGaps' into bertmadDWM)
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 
 	{ MODKEY,	                XK_q,      killclient,     {0} },
