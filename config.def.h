@@ -100,8 +100,8 @@ static Key keys[] = {
 
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_i,      focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_o,      focusstack,     {.i = -1 } },
 
 	/* Not used as i dislike having multiple master windows. If used the d key will conflict with calling dmenu 
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -156,10 +156,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Left,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Right, tagmon,         {.i = +1 } },
 
-        { MODKEY,                       XK_Page_Down, cycle,          { .i = -1 } },
-        { MODKEY|ShiftMask,             XK_Page_Down, tagcycle,       { .i = -1 } },
-        { MODKEY,                       XK_Page_Up,   cycle,          { .i = +1 } },
-        { MODKEY|ShiftMask,             XK_Page_Up,   tagcycle,       { .i = +1 } },
+        { MODKEY,                       XK_j,   cycle,          { .i = -1 } },
+        { MODKEY|ShiftMask,             XK_j,   tagcycle,       { .i = -1 } },
+        { MODKEY,                       XK_k,   cycle,          { .i = +1 } },
+        { MODKEY|ShiftMask,             XK_k,   tagcycle,       { .i = +1 } },
 
 	{ MODKEY,                       XK_Down, cycle,          { .i = -1 } },
         { MODKEY|ShiftMask,             XK_Down, tagcycle,       { .i = -1 } },
