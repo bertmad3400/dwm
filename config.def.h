@@ -48,6 +48,7 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
+#include <X11/XF86keysym.h>
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -190,9 +191,16 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_KP_Down,	spawn,	   SHCMD("setxkbmap dk")},
 
 	/* Other feature specific keybinds */
-	{ MODKEY,			XK_minus,	spawn,	   SHCMD("pulsemixer --change-volume -7")},
-	{ MODKEY,			XK_plus,	spawn,	   SHCMD("pulsemixer --change-volume +7")},
+	{ MODKEY,			XK_minus,	spawn,	   SHCMD("pulsemixer --change-volume -2")},
+	{ MODKEY,			XK_plus,	spawn,	   SHCMD("pulsemixer --change-volume +2")},
 	{ MODKEY|ShiftMask,		XK_m,		spawn,	   SHCMD("pulsemixer --toggle-mute")},
+
+	/* Keybinds related to the icons on F keys */
+	{ 0,			XF86XK_AudioLowerVolume,		spawn,		SHCMD("pulsemixer --change-volume -2") },
+	{ 0,			XF86XK_AudioRaiseVolume,		spawn,		SHCMD("pulsemixer --change-volume +2") },
+	{ 0,			XF86XK_AudioMute,			spawn,		SHCMD("pulsemixer --toggle-mute") },
+	{ 0,			XF86XK_MonBrightnessUp,		spawn,		SHCMD("backlight_control +2") },
+	{ 0, 			XF86XK_MonBrightnessDown,	spawn,		SHCMD("backlight_control -2") },
 
 	/* Keybinds specifically for launching specific urls using firefox */
 	{ MODKEY|ControlMask,		XK_KP_Home,  	spawn,	   SHCMD("firefox music.youtube.com")},
