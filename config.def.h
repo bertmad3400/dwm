@@ -109,8 +109,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	*/
 
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,		XK_i,      setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask,		XK_o,      setmfact,       {.f = +0.05} },
 
 	/*
 	{ MODKEY|Mod4Mask,              XK_i,      incrigaps,      {.i = +1 } },
@@ -152,10 +152,10 @@ static Key keys[] = {
 
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	
-	{ MODKEY,                       XK_Left,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_Right, focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_Left,  tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_Right, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_h,	focusmon,       {.i = -1 } },
+	{ MODKEY,                       XK_l,	focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_h,	tagmon,         {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_l,	tagmon,         {.i = +1 } },
 
         { MODKEY,                       XK_j,   cycle,          { .i = -1 } },
         { MODKEY|ShiftMask,             XK_j,   tagcycle,       { .i = -1 } },
