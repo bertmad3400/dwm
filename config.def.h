@@ -181,6 +181,14 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_g,        spawn,	   SHCMD("geogebra")},
 	{ MODKEY|ControlMask,		XK_v,        spawn,	   SHCMD("virtualbox")},
 
+	/* Shortcuts for screenshots */
+	/* Take screenshot of currently focused window */
+	{ MODKEY,				XK_s,   	spawn,	   SHCMD("scrot -e 'xclip -selection clipboard -t image/png -i $f' -u $HOME/Screenshots/Focused/%Y-%m-%d_%H-%M-%S.png")},
+	/* Take screenshot of the whole screen */
+	{ MODKEY|ControlMask,	XK_s,   	spawn,	   SHCMD("scrot -e 'xclip -selection clipboard -t image/png -i $f' $HOME/Screenshots/Full/%Y-%m-%d_%H-%M-%S.png")},
+	/* Freeze screen and allow user to specify selection */
+	{ MODKEY|ShiftMask,		XK_s,		spawn,	   SHCMD("scrot -e 'xclip -selection clipboard -t image/png -i $f' -s -f $HOME/Screenshots/Selection/%Y-%m-%d_%H-%M-%S.png")},
+
 	/* Shortcuts for turning volume up or down */
 	{ MODKEY,			XK_minus,	spawn,	   SHCMD("pulsemixer --change-volume -2")},
 	{ MODKEY,			XK_plus,	spawn,	   SHCMD("pulsemixer --change-volume +2")},
