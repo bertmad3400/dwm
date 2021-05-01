@@ -180,18 +180,8 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,		XK_m,        spawn,	   SHCMD("minecraft-launcher")},
 	{ MODKEY|ControlMask,		XK_g,        spawn,	   SHCMD("geogebra")},
 	{ MODKEY|ControlMask,		XK_v,        spawn,	   SHCMD("virtualbox")},
-	
 
-	/* Feature specific keybinds using numberpad*/
-	{ MODKEY,			XK_s,   	spawn,	   SHCMD("scrot -e 'xclip -selection clipboard -t image/png -i $f'")},
-	{ MODKEY|ShiftMask,		XK_s,		spawn,	   SHCMD("scrot -e 'xclip -selection clipboard -t image/png -i $f' -s")},
-	{ MODKEY|ShiftMask,		XK_KP_Prior,	spawn,	   SHCMD("slock")},
-	{ MODKEY|ShiftMask,		XK_KP_Left,	spawn,	   SHCMD("sudo reboot")},
-	{ MODKEY|ShiftMask,		XK_KP_Begin,	spawn,	   SHCMD("sudo shutdown now")},
-	{ MODKEY|ShiftMask,		XK_KP_End,	spawn,	   SHCMD("setxkbmap us")},
-	{ MODKEY|ShiftMask,		XK_KP_Down,	spawn,	   SHCMD("setxkbmap dk")},
-
-	/* Other feature specific keybinds */
+	/* Shortcuts for turning volume up or down */
 	{ MODKEY,			XK_minus,	spawn,	   SHCMD("pulsemixer --change-volume -2")},
 	{ MODKEY,			XK_plus,	spawn,	   SHCMD("pulsemixer --change-volume +2")},
 	{ MODKEY|ShiftMask,		XK_m,		spawn,	   SHCMD("pulsemixer --toggle-mute")},
