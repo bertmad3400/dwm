@@ -23,8 +23,8 @@ static const char green_col[]		= "#98971a";
 static const char red_col[]		= "#fb4934";
 static const char *colors[][3]		= {
 	/*               fg		bg		border   */
-	[SchemeNorm] = { fg_col,	green_col,	bg_col},
-	[SchemeSel]  = { fg_col,	bg_col,		red_col},
+	[SchemeNorm] = { fg_col,	bg_col,	bg_col},
+	[SchemeSel]  = { bg_col,	fg_col,		red_col},
 };
 
 /* tagging */
